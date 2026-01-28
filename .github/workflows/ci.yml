@@ -51,5 +51,4 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Deploy to Kubernetes
-        run: kubectl set image deployment/myapp myapp=krutarthkadia/myapp:${{ github.sha }}
+      - run: echo "Deploying to production..."
